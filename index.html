@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Odborná spôsobilosť vo výstavbe</title>
+<style>
+:root{--bg:#f4f4f2;--card:#fff;--ink:#2e3236;--mut:#6b7178;--or:#f28c28;--or2:#fde6cc;--gr:#3a3f44;--line:#dcdcd8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d2023;--card:#2a2e32;--ink:#f1f1ee;--mut:#a5abb2;--or2:#4a3115;--gr:#15171a;--line:#3d4247}}
+:root[data-theme="dark"]{--bg:#1d2023;--card:#2a2e32;--ink:#f1f1ee;--mut:#a5abb2;--or2:#4a3115;--gr:#15171a;--line:#3d4247}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;display:flex;flex-direction:column;overflow:hidden}
+.deck{flex:1;position:relative;min-height:0}
+.slide{position:absolute;inset:0;padding:clamp(20px,5vw,64px);display:none;flex-direction:column;justify-content:center;overflow-y:auto}
+.slide.on{display:flex}
+.tag{display:inline-block;background:var(--or);color:#fff;font-weight:700;padding:6px 14px;border-radius:6px;font-size:clamp(13px,1.6vw,18px);align-self:flex-start;margin-bottom:14px}
+h1{font-size:clamp(30px,6vw,68px);margin:0 0 12px;line-height:1.1}
+h2{font-size:clamp(24px,3.8vw,42px);margin:0 0 22px;padding-left:16px;border-left:8px solid var(--or)}
+p,li{font-size:clamp(16px,2.1vw,24px);line-height:1.5}
+.sub{color:var(--mut);font-size:clamp(16px,2.4vw,26px)}
+.title{background:var(--gr);color:#fff;margin:0}
+.title .sub{color:#d6d8da}
+.title h1 span{color:var(--or)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.c{background:var(--card);border:1px solid var(--line);border-top:6px solid var(--or);border-radius:10px;padding:16px 18px}
+.c b{display:block;font-size:clamp(17px,2vw,22px);margin-bottom:6px}
+.c span{color:var(--mut);font-size:clamp(14px,1.7vw,19px);line-height:1.45;display:block}
+.steps{display:flex;flex-wrap:wrap;gap:14px;align-items:stretch}
+.st{flex:1 1 180px;background:var(--gr);color:#fff;border-radius:10px;padding:16px}
+.st i{font-style:normal;background:var(--or);color:#fff;border-radius:50%;width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:8px}
+.st span{display:block;font-size:clamp(14px,1.8vw,20px);line-height:1.4}
+ul{margin:0;padding-left:1.2em}li{margin-bottom:8px}
+li::marker{color:var(--or)}
+.note{margin-top:20px;background:var(--or2);border-left:6px solid var(--or);padding:12px 16px;border-radius:6px;font-size:clamp(14px,1.7vw,19px)}
+.bar{display:flex;align-items:center;gap:12px;padding:10px 16px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));background:var(--gr);color:#fff}
+.bar button{background:var(--or);border:0;color:#fff;font-size:18px;font-weight:700;border-radius:8px;padding:8px 18px;cursor:pointer}
+.bar button:disabled{opacity:.35;cursor:default}
+.prog{flex:1;height:6px;background:#ffffff33;border-radius:3px;overflow:hidden}
+.prog div{height:100%;background:var(--or);width:0;transition:width .25s}
+.cnt{min-width:48px;text-align:right;font-variant-numeric:tabular-nums}
+table{width:100%;border-collapse:collapse;font-size:clamp(14px,1.9vw,22px)}th{background:var(--or);color:#fff;text-align:left;padding:10px 14px}td{background:var(--card);border-bottom:1px solid var(--line);padding:10px 14px}.slide p{margin:0 0 14px}</style>
+</head>
+<body>
+<div class="deck" id="deck">
+<section class="slide title on"><span class="tag">1.5</span><h1>Odborná spôsobilosť<br><span>vo výstavbe</span></h1><p class="sub">Kto, čo a na základe akej kvalifikácie smie vo výstavbe vykonávať</p></section>
+<section class="slide"><h2>Čo je odborná spôsobilosť</h2><p>Súhrn odborných vedomostí, zručností, vzdelania, praxe a ďalších podmienok potrebných na výkon odbornej činnosti.</p><div class="grid"><div class="c"><b>Vzdelanie</b><span>Teoretické a odborné vedomosti pre profesiu.</span></div><div class="c"><b>Odborná prax</b><span>Uplatnenie vedomostí v reálnych podmienkach.</span></div><div class="c"><b>Odborné skúšky</b><span>Pri regulovaných činnostiach preukázanie odbornej úrovne.</span></div><div class="c"><b>Oprávnenie / autorizácia</b><span>Osobitné oprávnenie podľa právnych predpisov.</span></div></div><div class="note">Chyba v projekte, meraní alebo realizácii môže ohroziť život, zdravie, majetok a bezpečnosť stavby.</div></section>
+<section class="slide"><h2>Prečo je potrebná</h2><ul><li>zabezpečuje odbornú a bezpečnú prípravu a realizáciu stavieb</li><li>znižuje riziko chýb, porúch a havárií</li><li>pomáha dodržiavať technické a právne požiadavky</li><li>určuje, kto môže vykonávať konkrétne činnosti</li><li>zvyšuje zodpovednosť odborníkov za rozhodnutia a výsledky</li><li>chráni stavebníka, vlastníka aj budúcich používateľov</li></ul></section>
+<section class="slide"><h2>Činnosti vo výstavbe</h2><p>Nejde len o murovanie a montáž, ale o celý súbor odborných činností.</p><div class="grid"><div class="c"><b>Príprava</b><span>Podklady, prieskumy, geodetické práce.</span></div><div class="c"><b>Projektovanie</b><span>Návrh stavby a jej častí.</span></div><div class="c"><b>Realizácia</b><span>Stavebné práce podľa projektu.</span></div><div class="c"><b>Kontrola</b><span>Kvalita, správnosť a súlad prác.</span></div><div class="c"><b>Údržba a zmeny</b><span>Opravy a úpravy stavby.</span></div><div class="c"><b>Odstránenie</b><span>Odborné búranie stavby.</span></div></div></section>
+<section class="slide"><h2>Vyhradené činnosti a oprávnenie</h2><div class="grid"><div class="c"><b>Projektová činnosť</b><span></span></div><div class="c"><b>Stavebný dozor</b><span></span></div><div class="c"><b>Vedenie uskutočňovania prác</b><span></span></div><div class="c"><b>Geodetické a kartografické činnosti</b><span>Vybrané</span></div></div><br><div class="grid"><div class="c"><b>Odborná spôsobilosť</b><span>Kvalifikácia a splnené podmienky na činnosť.</span></div><div class="c"><b>Autorizácia</b><span>Zákonom upravené oprávnenie autorizovaného odborníka v určenom rozsahu.</span></div><div class="c"><b>Rozsah oprávnenia</b><span>Určuje, čo smie odborník vykonávať, nie všetko automaticky.</span></div></div></section>
+<section class="slide"><h2>Projektant a statik</h2><div class="grid"><div class="c"><b>Projektant</b><span>Navrhuje riešenia podľa špecializácie, spracúva časť projektovej dokumentácie, zohľadňuje technické, bezpečnostné a prevádzkové požiadavky, spolupracuje so statikom a geodetom, zodpovedá v rozsahu oprávnenia.</span></div><div class="c"><b>Statik</b><span>Navrhuje a posudzuje nosné konštrukcie (základy, stropy, steny, stĺpy, nosníky, strechy), ich zaťaženie, mechanickú odolnosť a stabilitu stavby.</span></div></div></section>
+<section class="slide"><h2>Stavbyvedúci × stavebný dozor</h2><table><tr><th>Stavbyvedúci</th><th>Stavebný dozor</th></tr><tr><td>Vedie a organizuje uskutočňovanie prác</td><td>Kontroluje uskutočňovanie stavby</td></tr><tr><td>Koordinuje pracovníkov, subdodávateľov a postup</td><td>Kontroluje správnosť a kvalitu prác, materiálov a postupov</td></tr><tr><td>Priamo spojený s vedením realizácie</td><td>Plní kontrolnú a dozornú úlohu, upozorňuje na nedostatky</td></tr></table><div class="note">Spolupracujú s projektantom, geodetom a investorom, každý má však inú úlohu.</div></section>
+<section class="slide"><h2>Geodet vo výstavbe</h2><div class="grid"><div class="c"><b>Vytýčenie stavby</b><span>Prenesenie polohy a výšky z projektu do terénu.</span></div><div class="c"><b>Kontrolné merania</b><span>Správne miesto a výška stavby.</span></div><div class="c"><b>Zameranie skutočného vyhotovenia</b><span>Skutočný stav po realizácii.</span></div><div class="c"><b>Posuny a deformácie</b><span>Sledovanie zmien polohy a tvaru.</span></div><div class="c"><b>Geodetické podklady</b><span>Spracovanie a poskytovanie pre výstavbu.</span></div></div><div class="note">Pri regulovaných geodetických a kartografických činnostiach musí geodet spĺňať požiadavky právnych predpisov.</div></section>
+<section class="slide"><h2>Ako sa získava</h2><div class="steps"><div class="st"><i>1</i><span>Odborné vzdelanie</span></div><div class="st"><i>2</i><span>Odborná prax</span></div><div class="st"><i>3</i><span>Splnenie zákonných podmienok</span></div><div class="st"><i>4</i><span>Odborná skúška, ak ju predpis vyžaduje</span></div><div class="st"><i>5</i><span>Autorizácia alebo iné oprávnenie</span></div><div class="st"><i>6</i><span>Výkon činnosti len v rozsahu oprávnenia</span></div></div></section>
+<section class="slide"><h2>Zodpovednosť odborníka</h2><ul><li>zodpovedá za odbornú úroveň práce v rozsahu činnosti</li><li>musí dodržiavať právne predpisy a technické požiadavky</li><li>nesmie konať mimo rozsahu svojho oprávnenia</li><li>pri závažnom pochybení hrozí zodpovednosť za škodu alebo iné právne následky</li><li>dôležitá je dokumentácia a preukázateľnosť odborných úkonov</li></ul></section>
+<section class="slide"><h2>Príklad: rodinný dom</h2><div class="steps"><div class="st"><i>1</i><span><b>Geodet</b> zameria územie a vytýči stavbu</span></div><div class="st"><i>2</i><span><b>Projektant</b> pripraví projektovú dokumentáciu</span></div><div class="st"><i>3</i><span><b>Statik</b> navrhne a posúdi nosné konštrukcie</span></div><div class="st"><i>4</i><span><b>Stavbyvedúci</b> vedie a koordinuje realizáciu</span></div><div class="st"><i>5</i><span><b>Stavebný dozor</b> kontroluje priebeh</span></div><div class="st"><i>6</i><span><b>Geodet</b> vykoná kontrolné a záverečné merania</span></div></div></section>
+<section class="slide"><h2>Najdôležitejšie</h2><ul><li>Odborná spôsobilosť = vedomosti + zručnosti + vzdelanie + prax + zákonné podmienky</li><li>Projektant navrhuje, statik rieši nosné konštrukcie a stabilitu</li><li>Stavbyvedúci vedie realizáciu, stavebný dozor ju kontroluje</li><li>Geodet meria, vytyčuje a kontroluje polohu stavby</li><li>Autorizácia je oprávnenie na regulovanú činnosť v určenom rozsahu</li><li>Vyhradené činnosti smie vykonávať len osoba, ktorá spĺňa zákonné podmienky</li></ul></section>
+<section class="slide"><h2>Kontrolné otázky</h2><ul><li>Čo je odborná spôsobilosť a prečo je vo výstavbe dôležitá?</li><li>Čo sú vyhradené činnosti? Vymenuj ich.</li><li>Čo je autorizácia a prečo je dôležitý rozsah oprávnenia?</li><li>Aký je rozdiel medzi stavbyvedúcim a stavebným dozorom?</li><li>Aká je úloha projektanta, statika a geodeta?</li><li>Aké kroky vedú k získaniu odbornej spôsobilosti?</li></ul><div class="note">Legislatívny základ: zákon č. 25/2025 Z. z. (Stavebný zákon) a zákon č. 138/1992 Zb. o autorizovaných architektoch a autorizovaných stavebných inžinieroch.</div></section>
+</div>
+<div class="bar">
+<button id="p">◀</button>
+<div class="prog"><div id="pg"></div></div>
+<span class="cnt" id="n">1 / 13</span>
+<button id="x">▶</button>
+</div>
+<script>
+const s=[...document.querySelectorAll('.slide')];let i=0;
+const p=document.getElementById('p'),x=document.getElementById('x'),n=document.getElementById('n'),pg=document.getElementById('pg');
+function go(k){i=Math.max(0,Math.min(s.length-1,k));s.forEach((e,j)=>e.classList.toggle('on',j===i));n.textContent=(i+1)+' / '+s.length;pg.style.width=((i+1)/s.length*100)+'%';p.disabled=i===0;x.disabled=i===s.length-1}
+p.onclick=()=>go(i-1);x.onclick=()=>go(i+1);
+document.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();go(i+1)}if(['ArrowLeft','PageUp'].includes(e.key))go(i-1)});
+let t0=null;document.addEventListener('touchstart',e=>t0=e.touches[0].clientX);
+document.addEventListener('touchend',e=>{if(t0===null)return;const d=e.changedTouches[0].clientX-t0;if(Math.abs(d)>60)go(i+(d<0?1:-1));t0=null});
+go(0);
+</script>
+</body>
+</html>
